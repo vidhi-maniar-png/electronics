@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fas fa-bars"></label>
+
+      <a href="#" class="logo">Maniar Sales<span>.</span></a>
+
+      <nav class="navbar">
+
+          <a href="#home">home</a>
+          <a href="product.html">product</a>
+           <a href="about.html">about</a>
+          <!-- <a href="review.html">review</a> -->
+          <a href="contact.html">contact</a>
+
+      </nav>
+
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+
+      </div>
+  </header>
+  
+
+  <section class="home" id="home">
+  <div class="slider">
+    <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+
+    <div class="slide-item" style="display:flex;">
+      <div class="slide-content">
+        <h2>Trendy sneakers</h2>
+        <h1>Under ₹599</h1>
+        <p>TOP BRANDS | LATEST TRENDS</p>
+        <a href="product.html" class="btn">Shop Now</a>
+      </div>
+      <div class="slide-image">
+        <img src="images/bearing.jpg" alt="Sneaker 1">
+      </div>
+    </div>
+
+    <div class="slide-item" style="display:none;">
+      <div class="slide-content">
+        <h2>Stylish Watches</h2>
+        <h1>Starting ₹999</h1>
+        <p>BRANDS YOU LOVE | BEST OFFERS</p>
+        <a href="product.html" class="btn">Shop Now</a>
+      </div>
+      <div class="slide-image">
+        <img src="images/gift.png" alt="Watch">
+      </div>
+    </div>
+
+    <div class="slide-item" style="display:none;">
+      <div class="slide-content">
+        <h2>Modern Bags</h2>
+        <h1>Flat ₹799</h1>
+        <p>NEW COLLECTION | SHOP NOW</p>
+        <a href="product.html" class="btn">Shop Now</a>
+      </div>
+      <div class="slide-image">
+        <img src="images/wire.jpg" alt="Bag">
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+
+  .home {
+    padding-top: 0; /* space from top of page */
+}
+  .slider {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+  background-color: #e84393; /* pink */
+  border-radius: 50px;
+  overflow: hidden;
+  width: 200%;
+  margin: 10px auto;
+  margin-bottom:0% ;
+  padding: 10px;
+}
+
+.slide-item {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+}
+
+.slide-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.slide-content h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.slide-content h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.slide-content p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.slide-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image img {
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+</style>
+
+<!--Products page-->
+
+<section class="products" id="product">
+
+  <h1 class="heading"> latest <span>products</span></h1>
+<div class="box-container">
+
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/bearing.jpg" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>Bearing</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/capacitors.jpg" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>capaciters</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/gift.png" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>wire</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/gift.png" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>fans</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/gift.png" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>fan cover</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/gift.png" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>fuse</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/gift.png" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>type A bearing</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <span class="discount">-10%</span>
+    <div class="image">
+      <img src="images/gift.png" alt="">
+      <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-btn">Add to cart</a>
+        <a href="#" class="fas fa-share"></a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h3>table fan</h3>
+      <div class="price">₹150 <span>₹150</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+</section>
+
+<!--icons-->
+
+<section class="icons-container">
+
+  <div class="icons">
+    <img src="images/freedeleviry.jpg" alt="">
+    <div class="info">
+      <h3>free Delivery</h3>
+      <span>on all orders</span>
+    </div>
+
+  </div>
+
+  <div class="icons">
+    <img src="images/return.jpg" alt="">
+    <div class="info">
+      <h3>10 days return</h3>
+      <span>money back guarantee</span>
+    </div>
+    
+  </div>
+  <div class="icons">
+    <img src="images/gift.png" alt="">
+    <div class="info">
+      <h3>offer & gifts</h3>
+      <span>on all orders</span>
+    </div>
+    
+  </div>
+  <div class="icons">
+    <img src="images/secure.jpg" alt="">
+    <div class="info">
+      <h3>secure payments</h3>
+      <span>protected by payments</span>
+    </div>
+    
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h3>Maniar Sales</h3>
+      <p>
+        We provide high-quality electronic components like bearings,
+        capacitors, wires, and fans at affordable prices.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i> +91 9825267754</p>
+      <p><i class="fas fa-envelope"></i> maniarkd.mk@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> India</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
+
+  </div>
+
+  <div class="credit">
+   © 2011 Maniar Sales. Quality Electronics You Can Trust | All Rights Reserved
+  </div>
+
+</footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide-item");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "flex" : "none";
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
+</script>
+
+
+  
+
+
+</body>
+</html>
