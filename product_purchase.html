@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Purchase</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <input type="checkbox" id="toggler">
+  <label for="toggler" class="fas fa-bars"></label>
+  <a href="#" class="logo">Maniar Sales<span>.</span></a>
+  <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="product.html">product</a>
+      <a href="contact.html">contact</a>
+  </nav>
+  <div class="icons">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-shopping-cart"></a>
+    <a href="#" class="fas fa-user"></a>
+  </div>
+</header>
+
+<section class="product-detail">
+
+  <h1 class="heading" id="product-name">Product <span>Details</span></h1>
+
+  <div class="product-gallery">
+    <!-- Main Image -->
+    <div class="main-image">
+      <img id="mainImg" src="images/gift.png" alt="">
+    </div>
+
+    <!-- Small Images -->
+    <div class="thumbnail-images">
+      <img src="images/gift.png" onclick="changeImage(this.src)">
+      <img src="images/one.jpg" onclick="changeImage(this.src)">
+      <img src="images/secure.jpg" onclick="changeImage(this.src)">
+      <img src="images/return.jpg" onclick="changeImage(this.src)">
+    </div>
+
+    <!-- Price -->
+    <p id="product-price" style="font-size:20px; font-weight:bold; margin-top:10px;">₹0</p>
+  </div>
+
+</section>
+
+<script>
+  // Change main image on thumbnail click
+  function changeImage(image) {
+    document.getElementById("mainImg").src = image;
+  }
+
+  // Get URL parameters
+  function getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const pairs = queryString.split("&");
+    for (const pair of pairs) {
+      const [key, value] = pair.split("=");
+      params[key] = decodeURIComponent(value);
+    }
+    return params;
+  }
+
+  // Update page dynamically
+  const params = getQueryParams();
+  if(params.name) {
+    document.getElementById("product-name").innerHTML = params.name + " <span>Details</span>";
+  }
+  if(params.image) {
+    document.getElementById("mainImg").src = params.image;
+  }
+  if(params.price) {
+    document.getElementById("product-price").textContent = "₹" + params.price;
+  }
+</script>
+
+</body>
+</html>
